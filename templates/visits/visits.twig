@@ -9,6 +9,8 @@
 
             <p>Over <?php echo $visitCount ?> visit records!</p>
             <button class="btn btn-outline-secondary btn-lg" data-bs-toggle="modal" data-bs-target="#visit-modal">Add Visit</button>
+            <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">Toggle right offcanvas</button>
+
         </div>
     </div>
     <!--<form method="post">-->
@@ -51,6 +53,32 @@
         </tbody>
 
     </table>
+
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasRightLabel">Offcanvas right</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+            <form>
+                <div class="form-floating mb-3">
+                    <input type="text" class="form-control" id="recipient-name" placeholder="Name">
+                    <label for="recipient-name">Recipient:</label>
+                </div>
+                <div class="form-floating mb-3">
+                    <label for="message-text" class="col-form-label">Message:</label>
+                    <textarea class="form-control" id="message-text"></textarea>
+                </div>
+                <div class="mb-3">
+                    <label for="recipient-name" class="col-form-label">Recipient:</label>
+                    <input type="text" class="form-control" id="recipient-name">
+                </div>
+
+            </form>
+        </div>
+    </div>
+
+
 
 {% endblock %}
 
